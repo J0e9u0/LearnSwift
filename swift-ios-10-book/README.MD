@@ -38,7 +38,9 @@ Auto layout is a constraint-based layout system. It allows developers to create 
 
 ## Chapter 6: Designing UI Using Stack Views
 
+The stack view provides a streamlined interface for laying out a collection of views in either a column or a row.
 
+In each Xcode project, it includes an asset catalog (i.e. Assets.xcassets) for managing images and icons that are used by your app.
 
 <!--
 file:///Users/balelin/Downloads/swift-ios10-book.pdf
