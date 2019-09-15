@@ -45,8 +45,31 @@ In each Xcode project, it includes an asset catalog (i.e. Assets.xcassets) for m
 ## Chapter 8 Creating a Simple Table Based App
 
 
+## Chapter 9
+
+In Swift, you use @IBOutlet keyword to indicate a property of a class, that can be exposed to Interface Builder. For properties annotated with the IBOutlet keywords, we call it outlets.
+
+### @IBAction vs @IBOutlet
+
+We've used @IBAction to indicate action methods when developing the HelloWorld app. What's the difference between @IBAction and @IBOutlet? @IBOutlet is used to indicate a property that can be connected with a view object in a storyboard. For example, if the outlet is connected with a button, you can use the outlet to change the color or title of the button. On the other hand, @IBAction is used to indicate an action method that can be triggered by a certain event. For example, when a user taps a button, it can trigger an action method to do something.
+
+### as! and as?
+
+Downcasting allows you to convert a value of a class to its derived class. For example, RestaurantTableViewCell is a child class of UITableViewCell. The dequeueReusableCellWithIdentifier method always returns a UITableViewCell object. If a custom cell is used, this object can be converted to the specific cell type (e.g. RestaurantTableViewCell). Prior to Swift 1.2, you can just use the as operator for downcasting. However, sometimes the object may not be converted to a specified type. Therefore, from Swift 1.2 and onwards, Apple introduced two more operators: as! and as?. If you're quite sure that the downcasting can perform correctly, use as! to perform the conversion. In case you're not sure if the value of one type can be converted to another, use as? to perform an optional downcasting. You're required to perform additional checking to see if the downcasting is successful or not.
 
 <!--
 file:///Users/balelin/Downloads/swift-ios10-book.pdf
-P127
+P173
 -->
+
+---
+
+# Q & A
+
+## Q
+
+```
+2019-09-15 15:33:23.965765+0800 FoodPin[19744:330045] *** Terminating app due to uncaught exception 'NSInternalInconsistencyException', reason: '-[UITableViewController loadView] instantiated view controller with identifier "UIViewController-BYZ-38-t0r" from storyboard "Main", but didn't get a UITableView.'
+```
+
+在Main.storyboard里有一个RestaurantTableViewController下的子元素是UIView，应该改成UITableView
