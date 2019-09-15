@@ -42,7 +42,11 @@ The stack view provides a streamlined interface for laying out a collection of v
 
 In each Xcode project, it includes an asset catalog (i.e. Assets.xcassets) for managing images and icons that are used by your app.
 
+## Chapter 8 Creating a Simple Table Based App
+
+
+
 <!--
 file:///Users/balelin/Downloads/swift-ios10-book.pdf
-P85
+P127
 -->
